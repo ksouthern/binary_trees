@@ -217,9 +217,10 @@ class Node:
     #                                                                                                                      #
     ########################################################################################################################
     """
-    1)Implement unbalanced
-    2)Implement rotate_right and rotate_left
-    3)Finish rebalance
+    1)Extend insert to add parents
+    2)Implement unbalanced
+    3)Implement rotate_right and rotate_left
+    4)Finish rebalance
     """
 
     def unbalanced(self):
