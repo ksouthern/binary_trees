@@ -20,7 +20,7 @@ class Node:
         self.left = None
         self.right = None
         self.data = data
-        self.parent = None
+
 
 
     def lookup(self, data, parent=None):
@@ -199,13 +199,11 @@ class Node:
             if data < self.data:
                 if self.left is None:
                     self.left = Node(data)
-                    self.left.rebalance()
                 else:
                     self.left.insert(data)
             elif data > self.data:
                 if self.right is None:
                     self.right = Node(data)
-                    self.right.rebalance()
                 else:
                     self.right.insert(data)
         else:
@@ -218,15 +216,9 @@ class Node:
     ########################################################################################################################
     """
     1)Extend insert to add parents
-    2)Implement unbalanced
-    3)Implement rotate_right and rotate_left
-    4)Finish rebalance
-    """
+    2)Implement rotate_right and rotate_left
 
-    def unbalanced(self):
-        """
-        Check if the subtree rooted at this node is unbalanced
-        """
+    """
 
 
     def rotate_right(self):
@@ -248,32 +240,3 @@ class Node:
         self.right = new_root.right
         self.parent = new_root.parent
         """
-
-    def rebalance(self):
-        x = self
-        if not x.parent:
-            return
-        y = x.parent
-        if not y.parent:
-            return
-        z = y.parent
-        while (not z.unbalanced()) and z.parent:
-            (x, y, z) = (y, z, z.parent)
-        if z.unbalanced():
-            if z.left == y:
-                if y.left == x:
-                    # ll case
-                    ...
-
-                else:
-                    # lr case
-                    ...
-            else:
-                if y.right == x:
-                    # rr case
-                    ...
-                else:
-                    # rl case
-                    ...
-            z.refresh_parents()
-        # else done

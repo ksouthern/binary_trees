@@ -8,11 +8,8 @@ I've based the binary tree implementation on this one: https://github.com/lauren
 I've extended it to AVL trees using: https://www.geeksforgeeks.org/avl-tree-set-1-insertion/ 
 
 Instructions:
-
-  1)Extend insert to add parents
-
-  2)Implement unbalanced
+  1)Add parents to the class
+  
+  2)Extend insert and delete to add/remove parents
 
   3)Implement rotate_right and rotate_left
-  
-  4)Finish rebalance
