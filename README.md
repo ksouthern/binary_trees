@@ -1,4 +1,4 @@
-# AVL_trees
+# Binary and AVL_trees
 binary_tree.py contains an implementaiton of a binary tree, at the bottom of the file are some functions that need implementing to turn the binary tree into an AVL_tree
 
 testing.py is what I've been using to run the code and it displays the trees.
