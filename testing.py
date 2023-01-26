@@ -1,4 +1,4 @@
-from binary_tree_complete import Node
+from binary_tree import Node
 root = Node(10)
 toadd = [7, 4, 2, 9, 8, 15, 12, 17, 16, 18]
 #root = Node(4)
