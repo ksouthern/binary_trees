@@ -132,8 +132,8 @@ class Node:
             y = i[1]
             text = i[2]
             if r == 10:
-                canvas.create_oval(x - r, y - r, x + r, y + r, fill="black")
-            canvas.create_text(x, y, text=text, fill="white")
+                canvas.create_oval(x - r, y - r, x + r, y + r, fill="white", outline="black")
+            canvas.create_text(x, y, text=text, fill="black")
 
         window.mainloop()
 
