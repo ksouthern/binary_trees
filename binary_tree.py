@@ -112,7 +112,7 @@ class Node:
         sh = 512 * 1.25
         sw = 512 * 1.5
         r = sw / w / 2
-        if r >=10:
+        if r >= 10:
             r = 10
         window = Tk()
         window.title("Binary Tree")  # Set a title
@@ -125,15 +125,15 @@ class Node:
             y1 = i[1]
             x2 = i[2]
             y2 = i[3]
-            canvas.create_line(x1, y1, x2, y2)
+            canvas.create_line(x1, y1, x2, y2, fill="black")
         toshow = self.get_coords(50 + sw / 2, 50 + r, sw / 2, sh)
         for i in toshow:
             x = i[0]
             y = i[1]
             text = i[2]
             if r == 10:
-                canvas.create_oval(x - r, y - r, x + r, y + r, fill="white")
-            canvas.create_text(x, y, text=text)
+                canvas.create_oval(x - r, y - r, x + r, y + r, fill="black")
+            canvas.create_text(x, y, text=text, fill="white")
 
         window.mainloop()
 
